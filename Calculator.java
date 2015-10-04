@@ -38,44 +38,45 @@ public class Calculator extends JFrame implements ActionListener {
 		
 		// Create JButtons
 		b1 = new JButton("1");
-        b2 = new JButton("2");
-        b3 = new JButton("3");
-        b4 = new JButton("4");
-        b5 = new JButton("5");
-        b6 = new JButton("6");
-        b7 = new JButton("7");
-        b8 = new JButton("8");
-        b9 = new JButton("9");
-        b0 = new JButton("0");
-        bdiv = new JButton("/");
-        bmul = new JButton("*");
-        bsub = new JButton("-");
-        badd = new JButton("+");
-        bdec = new JButton(".");
-        beq = new JButton("=");
+	        b2 = new JButton("2");
+	        b3 = new JButton("3");
+	        b4 = new JButton("4");
+	        b5 = new JButton("5");
+	        b6 = new JButton("6");
+	        b7 = new JButton("7");
+	        b8 = new JButton("8");
+	        b9 = new JButton("9");
+	        b0 = new JButton("0");
+	        bdiv = new JButton("/");
+	        bmul = new JButton("*");
+	        bsub = new JButton("-");
+	        badd = new JButton("+");
+	        bdec = new JButton(".");
+	        beq = new JButton("=");
 		bdel=new JButton("Del");
-        bclr=new JButton("C");
+        	bclr=new JButton("C");
+		
 		// When the action event occurs, that object's actionPerformed method is invoked
 		b1.addActionListener(this);
-        b2.addActionListener(this);
-        b3.addActionListener(this);
-        b4.addActionListener(this);
-        b5.addActionListener(this);
-        b6.addActionListener(this);
-        b7.addActionListener(this);
-        b8.addActionListener(this);
-        b9.addActionListener(this);
-        b0.addActionListener(this);
-        badd.addActionListener(this);
-        bdiv.addActionListener(this);
-        bmul.addActionListener(this);
-        bsub.addActionListener(this);
-        bdec.addActionListener(this);
-        beq.addActionListener(this);
+	        b2.addActionListener(this);
+	        b3.addActionListener(this);
+	        b4.addActionListener(this);
+	        b5.addActionListener(this);
+	        b6.addActionListener(this);
+	        b7.addActionListener(this);
+	        b8.addActionListener(this);
+	        b9.addActionListener(this);
+	        b0.addActionListener(this);
+	        badd.addActionListener(this);
+	        bdiv.addActionListener(this);
+	        bmul.addActionListener(this);
+	        bsub.addActionListener(this);
+	        bdec.addActionListener(this);
+	        beq.addActionListener(this);
 		bdel.addActionListener(this);
-        bclr.addActionListener(this);
+	 	bclr.addActionListener(this);
 		
-		// Add buttons to the panel grid
+		// Add buttons to the panel grid1
 		grid1.add(b7);
 		grid1.add(b8);
 		grid1.add(b9);
@@ -98,12 +99,13 @@ public class Calculator extends JFrame implements ActionListener {
 
 		grid1.add(bdel);
 		grid1.add(bclr);
+		
 		// Add panel grid1 to ContentPane
 		con.add(grid1,BorderLayout.CENTER);
 	
 	}
 		
-	public void num(int i) {
+	public void num(int i) { //calculate
 		String s = null;
 		s = String.valueOf(i);
 		
@@ -121,7 +123,7 @@ public class Calculator extends JFrame implements ActionListener {
 	}
 	
 	@Override
-	public void actionPerformed(ActionEvent e) {
+	public void actionPerformed(ActionEvent e) { //get the button value 
 		// event number
 		if(e.getSource()==b1)
 		num(1);
